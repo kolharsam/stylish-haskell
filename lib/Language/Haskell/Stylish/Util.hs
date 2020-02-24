@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 module Language.Haskell.Stylish.Util
-    ( nameToString
+    ( Indent
+    , nameToString
     , isOperator
     , indent
     , padRight
@@ -34,6 +35,10 @@ import qualified Language.Haskell.Exts         as H
 --------------------------------------------------------------------------------
 import           Language.Haskell.Stylish.Step
 
+--------------------------------------------------------------------------------
+newType Indent = Indent String
+
+-- to call the specific functions based on the different cases
 
 --------------------------------------------------------------------------------
 nameToString :: H.Name l -> String
